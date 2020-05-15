@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Dark CMS Nord Theme",
+    "version": "1.7.2",
+    "description": "The new dark theme, based on nord.",
+    "browser_action": {
+        "default_icon": "extra-junk/icon.png"
+    },
+    "icons": {
+        "16": "extra-junk/icon.png",
+        "48": "extra-junk/icon.png",
+        "128": "extra-junk/icon.png"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://cms.g5marketingcloud.com/*",
+            "https://cms.g5marketingcloud.com/admin/clients/*/bulk_settings/*"
+        ],
+        "js": [
+            "js/contentscript.js"
+        ],
+        "exclude_matches": [
+            "https://cms.g5marketingcloud.com/*/senior-living/*/*/*/*",
+            "https://cms.g5marketingcloud.com/*/senior-living/*/*/*",
+            "https://cms.g5marketingcloud.com/*/self-storage/*/*/*/*",
+            "https://cms.g5marketingcloud.com/*/self-storage/*/*/*",
+            "https://cms.g5marketingcloud.com/*/apartments/*/*/*/*",
+            "https://cms.g5marketingcloud.com/*/apartments/*/*/*"
+        ]
+    }],
+    "web_accessible_resources": [
+        "NordDark.css",
+        "dark-nord-theme-bulk-updater.css"
+    ]
+}
