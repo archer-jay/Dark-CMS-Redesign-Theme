@@ -30,7 +30,6 @@
     }],
     "web_accessible_resources": [
         "NordDark.css",
-        "dark-nord-theme-bulk-updater.css",
-        "normalize.css"
+        "dark-nord-theme-bulk-updater.css"
     ]
 }
