@@ -330,7 +330,7 @@ ul.locations .show-staging-btn::after {
 
 div.nav-wrapper a,
 ul.breadcrumb a {
-    color: #d8dee9!important;
+    color: #95abd4!important;
 }
 
 .switch label input[type=checkbox]:checked+.lever {
@@ -973,15 +973,39 @@ body.ember-application.auth-disabled.client-websites .navbar-fixed {
     top: 40px;
 }
 
+#side-nav-secondary .style-edits .collapsible-body .custom-classes .input-field label.active,
+#side-nav-secondary .style-edits .collapsible-body .custom-fonts .input-field label.active {
+    top: -2rem;
+    background-color: transparent;
+    padding: 0 !important;
+    margin-top: 0px;
+    text-transform: none;
+    font-size: 1em;
+}
+
 @media only screen and (min-width: 601px) {
-    .client-website-index nav,
+    .client-website-index nav:not(.g5-header-menu),
     .client-website-page nav,
     nav .nav-wrapper i,
     nav a.button-collapse,
-    nav a.button-collapse i {
-        height: 30px;
-        line-height: 30px;
+    nav a.button-collapse i,
+    .client-website-assets nav,
+    .client-website-themes nav,
+    .client-website-seos nav,
+    .client-website-redirects nav,
+    .client-website-saves nav,
+    .client-websites nav {
+        height: 30px !important;
+        line-height: 30px !important;
     }
+}
+
+.client-website-saves .input-field label {
+    color: #9e9e9e;
+}
+
+.client-website-saves .input-field label.active {
+    display: none;
 }
 
 .dismissable-alert.success-bar {
@@ -1188,7 +1212,7 @@ button[style*="display: inline-block; background-color: rgb(245, 98, 98); box-sh
 @media only screen and (min-width: 993px) {
     .client-website-page #toast-container,
     .client-website-index #toast-container {
-        top: 96px;
+        top: 145px;
         right: 1%;
         max-width: 475px;
         width: 25%;
@@ -1216,7 +1240,7 @@ button[style*="display: inline-block; background-color: rgb(245, 98, 98); box-sh
     right: 0px;
     position: absolute;
     text-decoration: none;
-    width: 100%;
+    width: 475px;
     border-radius: 2px;
     height: 100%;
     z-index: 1;
@@ -1346,4 +1370,8 @@ body.client-assets .navbar-fixed {
 #sort-locations-select .select-wrapper input.select-dropdown {
     color: #e5e9f0;
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu28AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0NjdBMUEwMzg4MDUxMUU2QjY0RTg3MDhFMTEwNjIyOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0NjdBMUEwNDg4MDUxMUU2QjY0RTg3MDhFMTEwNjIyOCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ2N0ExQTAxODgwNTExRTZCNjRFODcwOEUxMTA2MjI4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQ2N0ExQTAyODgwNTExRTZCNjRFODcwOEUxMTA2MjI4Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+4S3vUgAAAKBJREFUeNpinDdvHgMUdABxKBCbAPF7BsIApHYmEIclJibuYUIypByIlYD4DBALEmHIKqi6VfPnz3cBGeQCNQQGCBkGMwQGwIaBDNoDxKvRFOMyDN0QGEiHeS2MCMNwGQIKo9VMyAJ4DEvDZwiIwYQugcOwmdgMQVbLREgBDoChholYhYTkmEixFZ8FTCR4Aa+XWYjICmHQAL+HTxFAgAEAOWAqkVomTyMAAAAASUVORK5CYII=) 96% center no-repeat #4b5465;
+}
+
+#bulk-settings-wrapper {
+    color: #050725;
 }
