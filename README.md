@@ -1,2 +1,2 @@
-# Dark-CMS-Nord-Theme
-Dark mode version of the nord theme
+# Dark-Redesign-CMS-Theme
+Darkly colored redesign for the realpage:G5 cms
