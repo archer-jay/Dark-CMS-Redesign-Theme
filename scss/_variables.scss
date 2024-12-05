@@ -1,0 +1,32 @@
+$colors: (
+  black: #000000,
+  white: #ffffff,
+  gray-10: #e5e9f0,
+  cool-gray-10: #d8dee9,
+  gray-20: #c3c3c3,
+  gray-40: #999,
+  cool-gray-40: #9aa0a6,
+  cool-gray-60: #5f6368,
+  gray-70: #505050,
+  gray-80: #444444,
+  gray-90: #313235,
+  cool-gray-90: #2e3440,
+  cadet-1: #76a4d3,
+  cadet-2: #79baf9
+);
+
+@mixin generate-color-classes($color-map) {
+  @each $name, $color in $color-map {
+    .bg-#{$name} {
+      background-color: $color !important;
+    }
+    .border-#{$name} {
+      border-color: $color !important;
+    }
+    .text-#{$name} {
+      color: $color !important;
+    }
+  }
+}
+
+
