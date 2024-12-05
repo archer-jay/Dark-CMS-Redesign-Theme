@@ -1,0 +1,14 @@
+{
+  "name": "dark-cms-redesign-theme",
+  "version": "1.0.0",
+  "description": "Darkly colored redesign for the realpage:G5 cms",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay Archer",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.24.0"
+  }
+}
