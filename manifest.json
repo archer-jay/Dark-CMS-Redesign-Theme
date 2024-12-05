@@ -12,7 +12,11 @@
     "host_permissions": [
         "https://cms.g5marketingcloud.com/*",
         "https://cms.g5marketingcloud.com/admin/one_trust",
-        "https://cms.g5marketingcloud.com/admin/clients/*/websites/*/changelogs"
+        "https://cms.g5marketingcloud.com/admin/clients/*/websites/*/changelogs",
+        "https://content-marketing-system-content-staging.g5devops.com/*",
+        "https://content-marketing-system-content-staging.g5devops.com/admin/one_trust",
+        "https://content-marketing-system-content-staging.g5devops.com/clients/*/websites/*/changelogs",
+        "http://localhost:*/*"
     ],
     "web_accessible_resources": [
         {
@@ -30,7 +34,9 @@
                 "https://cms.g5marketingcloud.com/*",
                 "https://cms.g5marketingcloud.com/*/*/*/*",
                 "https://cms.g5marketingcloud.com/*/*/*/*/",
-                "https://cms.g5marketingcloud.com/admin/one_trust"
+                "https://cms.g5marketingcloud.com/admin/one_trust",
+                "https://content-management-system-content-staging.g5devops.com/*",
+                "http://localhost:*/*"
             ],
             "exclude_matches": [
                 "https://cms.g5marketingcloud.com/*/senior-living/*/*/*/*",
